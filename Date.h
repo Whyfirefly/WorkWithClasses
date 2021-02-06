@@ -1,6 +1,10 @@
 #ifndef UNTITLED_DATE_H
 #define UNTITLED_DATE_H
 
+#include <string>
+
+//using namespace std;
+
 class Date {
 private:
     int year;
@@ -15,6 +19,12 @@ public:
             this->year = year;
         }
     }
+
+    int GetYear()
+    {
+        return year;
+    }
+
     void SetMonth(int month)
     {
         if (month < 1) {
@@ -25,6 +35,12 @@ public:
             this->month = month;
         }
     }
+
+    int GetMonth()
+    {
+        return month;
+    }
+
     void SetDay(int day)
     {
         if (day < 1) {
@@ -36,6 +52,11 @@ public:
         }
     }
 
+    int GetDay()
+    {
+        return day;
+    }
+
     Date() {}
     Date(int year, int month, int day)
     {
@@ -43,6 +64,12 @@ public:
         SetMonth(month);
         SetDay(day);
     }
+
+    /*string DateToString() {
+        string result;
+        result = to_string(day) + "." + to_string(month) + "." + to_string(year);
+        return result;*/
+    //пишет, что использование std в классах невозможно. Как тогда сделать? Вынести еще в отдельный header? или это вообще лишнее?
 };
 
 #endif //UNTITLED_DATE_H

@@ -9,9 +9,21 @@ enum TypePhone {
     Mobile, Work, Home
 };
 
+string TypePhoneToString(TypePhone type)
+{
+    switch (type) {
+        case Mobile:
+            return "мобильный";
+        case Work:
+            return "рабочий";
+        case Home:
+            return "домашний";
+    }
+}
+
 struct Phone {
     string number;
-    TypePhone type;
+    TypePhoneToString(type);
 };
 
 #endif //UNTITLED_PHONE_H

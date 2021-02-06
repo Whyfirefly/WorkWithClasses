@@ -30,6 +30,12 @@ public:
             flag_firstName = false;
         }
     }
+
+    string GetFirstName()
+    {
+        return firstName;
+    }
+
     void SetLastName(string lastName)
     {
         if (flag_lastName) {
@@ -38,12 +44,22 @@ public:
         }
     }
 
+    string GetLastName()
+    {
+        return lastName;
+    }
+
     void SetDateOfBirth(Date date)
     {
         if (flag_dateOfBirth) {
             this->dateOfBirth = date;
             flag_dateOfBirth = false;
         }
+    }
+
+    Date GetDateOfBirth ()
+    {
+        return dateOfBirth;
     }
 
     Person() {}
